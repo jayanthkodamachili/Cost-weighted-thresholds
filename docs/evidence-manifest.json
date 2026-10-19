@@ -1,0 +1,25 @@
+{
+  "note": "each command was run by tools/capture_cli.py, exit codes as returned",
+  "runs": [
+    {
+      "command": "cost-threshold --distortion identity",
+      "exit_code": 0
+    },
+    {
+      "command": "cost-threshold --distortion power --distortion-strength 1.2",
+      "exit_code": 1
+    },
+    {
+      "command": "cost-threshold --distortion logit_shift --cost-false-negative 50",
+      "exit_code": 4
+    },
+    {
+      "command": "cost-threshold --distortion power --calibrator isotonic --calibration-frac 0.05",
+      "exit_code": 0
+    },
+    {
+      "command": "cost-threshold --calibration-frac 1.5",
+      "exit_code": 2
+    }
+  ]
+}

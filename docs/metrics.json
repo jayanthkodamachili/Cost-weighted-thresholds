@@ -1,0 +1,422 @@
+{
+  "metrics": {
+    "tests_total": 71,
+    "coverage_line_pct": 100.0,
+    "shared_auc": 0.706592,
+    "auc_spread": 0.0,
+    "calibrated_regret": 0.0015,
+    "worst_regret": 1.0397,
+    "regret_multiple": 683.0,
+    "losing_distortions": 3,
+    "symmetric_share": 0.01,
+    "worst_ratio_share": 1.51,
+    "worst_ratio": 50,
+    "ratios_losing": 4,
+    "regret_before_repair": 0.6319,
+    "cheap_rows": 1200,
+    "cheap_recovered": 0.6299,
+    "cheap_after": 0.0021,
+    "platt_auc_change": 0.0,
+    "isotonic_auc_change": -0.001531,
+    "gap_correlation": 0.8236,
+    "auc_correlation": 0.0954,
+    "bad_models": 155,
+    "missed_by_screen": 1,
+    "miss_rate": 0.006,
+    "false_flags": 54,
+    "trials": 300,
+    "e1_identity_auc": 0.706592,
+    "e1_identity_gap": -0.0003,
+    "e1_identity_cost": 0.7322,
+    "e1_identity_regret": 0.0015,
+    "e1_power_auc": 0.706592,
+    "e1_power_gap": -0.1458,
+    "e1_power_cost": 1.3664,
+    "e1_power_regret": 0.6352,
+    "e1_logit_shift_auc": 0.706592,
+    "e1_logit_shift_gap": -0.164,
+    "e1_logit_shift_cost": 1.7707,
+    "e1_logit_shift_regret": 1.0397,
+    "e1_overconfident_auc": 0.706592,
+    "e1_overconfident_gap": -0.1062,
+    "e1_overconfident_cost": 1.1154,
+    "e1_overconfident_regret": 0.3844,
+    "e1_underconfident_auc": 0.706592,
+    "e1_underconfident_gap": 0.1182,
+    "e1_underconfident_cost": 0.7965,
+    "e1_underconfident_regret": 0.0659,
+    "e2_1_t": 0.5,
+    "e2_1_regret": 0.0019,
+    "e2_1_share": 0.01,
+    "e2_2_t": 0.3333,
+    "e2_2_regret": 0.0307,
+    "e2_2_share": 0.084,
+    "e2_5_t": 0.1667,
+    "e2_5_regret": 0.2652,
+    "e2_5_share": 0.432,
+    "e2_10_t": 0.0909,
+    "e2_10_regret": 0.6335,
+    "e2_10_share": 0.865,
+    "e2_50_t": 0.0196,
+    "e2_50_regret": 1.2084,
+    "e2_50_share": 1.51,
+    "e2_200_t": 0.005,
+    "e2_200_regret": 1.0607,
+    "e2_200_share": 1.326,
+    "e3_platt_2_after": 0.0021,
+    "e3_platt_5_after": 0.0019,
+    "e3_platt_10_after": 0.0023,
+    "e3_platt_25_after": 0.0028,
+    "e3_platt_50_after": 0.0026,
+    "e3_isotonic_2_after": 0.0012,
+    "e3_isotonic_5_after": 0.001,
+    "e3_isotonic_10_after": 0.0008,
+    "e3_isotonic_25_after": 0.0031,
+    "e3_isotonic_50_after": 0.0017,
+    "e4_abs_gap_rho": 0.8236,
+    "e4_ece_rho": 0.8147,
+    "e4_brier_rho": 0.1826,
+    "e4_auc_rho": 0.0954
+  },
+  "display": {
+    "tests_total": "71",
+    "coverage_line_pct": "100",
+    "shared_auc": "0.706592",
+    "auc_spread": "0.00000000",
+    "calibrated_regret": "0.0015",
+    "worst_regret": "1.0397",
+    "regret_multiple": "683",
+    "losing_distortions": "3",
+    "symmetric_share": "0.010",
+    "worst_ratio_share": "1.510",
+    "worst_ratio": "50",
+    "ratios_losing": "4",
+    "regret_before_repair": "0.6319",
+    "cheap_rows": "1200",
+    "cheap_recovered": "0.6299",
+    "cheap_after": "0.0021",
+    "platt_auc_change": "+0.000000",
+    "isotonic_auc_change": "-0.001531",
+    "gap_correlation": "+0.8236",
+    "auc_correlation": "+0.0954",
+    "bad_models": "155",
+    "missed_by_screen": "1",
+    "miss_rate": "0.006",
+    "false_flags": "54",
+    "trials": "300",
+    "e1_identity_auc": "0.706592",
+    "e1_identity_gap": "-0.0003",
+    "e1_identity_cost": "0.7322",
+    "e1_identity_regret": "0.0015",
+    "e1_power_auc": "0.706592",
+    "e1_power_gap": "-0.1458",
+    "e1_power_cost": "1.3664",
+    "e1_power_regret": "0.6352",
+    "e1_logit_shift_auc": "0.706592",
+    "e1_logit_shift_gap": "-0.1640",
+    "e1_logit_shift_cost": "1.7707",
+    "e1_logit_shift_regret": "1.0397",
+    "e1_overconfident_auc": "0.706592",
+    "e1_overconfident_gap": "-0.1062",
+    "e1_overconfident_cost": "1.1154",
+    "e1_overconfident_regret": "0.3844",
+    "e1_underconfident_auc": "0.706592",
+    "e1_underconfident_gap": "+0.1182",
+    "e1_underconfident_cost": "0.7965",
+    "e1_underconfident_regret": "0.0659",
+    "e2_1_t": "0.5000",
+    "e2_1_regret": "0.0019",
+    "e2_1_share": "0.010",
+    "e2_2_t": "0.3333",
+    "e2_2_regret": "0.0307",
+    "e2_2_share": "0.084",
+    "e2_5_t": "0.1667",
+    "e2_5_regret": "0.2652",
+    "e2_5_share": "0.432",
+    "e2_10_t": "0.0909",
+    "e2_10_regret": "0.6335",
+    "e2_10_share": "0.865",
+    "e2_50_t": "0.0196",
+    "e2_50_regret": "1.2084",
+    "e2_50_share": "1.510",
+    "e2_200_t": "0.0050",
+    "e2_200_regret": "1.0607",
+    "e2_200_share": "1.326",
+    "e3_platt_2_after": "0.0021",
+    "e3_platt_5_after": "0.0019",
+    "e3_platt_10_after": "0.0023",
+    "e3_platt_25_after": "0.0028",
+    "e3_platt_50_after": "0.0026",
+    "e3_isotonic_2_after": "0.0012",
+    "e3_isotonic_5_after": "0.0010",
+    "e3_isotonic_10_after": "0.0008",
+    "e3_isotonic_25_after": "0.0031",
+    "e3_isotonic_50_after": "0.0017",
+    "e4_abs_gap_rho": "+0.8236",
+    "e4_ece_rho": "+0.8147",
+    "e4_brier_rho": "+0.1826",
+    "e4_auc_rho": "+0.0954"
+  },
+  "anchors": {
+    "tests_total": [
+      "{} tests"
+    ],
+    "coverage_line_pct": [
+      "{} percent line coverage",
+      "{}% line coverage"
+    ],
+    "shared_auc": [
+      "all report {}",
+      "auc of {}"
+    ],
+    "auc_spread": [
+      "varies by {}",
+      "spread of {}"
+    ],
+    "calibrated_regret": [
+      "regret of {}",
+      "from {} to"
+    ],
+    "worst_regret": [
+      "to {}",
+      "worst is {}"
+    ],
+    "regret_multiple": [
+      "factor of {}",
+      "{} times"
+    ],
+    "losing_distortions": [
+      "{} of the five",
+      "{} of 5 distortions"
+    ],
+    "symmetric_share": [
+      "{} at symmetric",
+      "share of {} when"
+    ],
+    "worst_ratio_share": [
+      "{} at fifty",
+      "reaches {}"
+    ],
+    "worst_ratio": [
+      "at {} to 1",
+      "{} to one"
+    ],
+    "ratios_losing": [
+      "{} of 6 cost",
+      "{} of the six"
+    ],
+    "regret_before_repair": [
+      "of the {} available",
+      "{} of regret"
+    ],
+    "cheap_rows": [
+      "{} held-out rows",
+      "just {} rows"
+    ],
+    "cheap_recovered": [
+      "recover {}",
+      "removes {}"
+    ],
+    "cheap_after": [
+      "leaving {}",
+      "down to {}"
+    ],
+    "platt_auc_change": [
+      "exactly {}",
+      "moves auc by {}"
+    ],
+    "isotonic_auc_change": [
+      "costs {}",
+      "moves it {}"
+    ],
+    "gap_correlation": [
+      "correlates {}",
+      "{} with regret"
+    ],
+    "auc_correlation": [
+      "manages {}",
+      "correlates {}"
+    ],
+    "bad_models": [
+      "{} of 300",
+      "{} genuinely bad"
+    ],
+    "missed_by_screen": [
+      "lets {} through",
+      "misses {}"
+    ],
+    "miss_rate": [
+      "{} of them",
+      "miss rate of {}"
+    ],
+    "false_flags": [
+      "flags {} that",
+      "{} models that were fine"
+    ],
+    "trials": [
+      "{} random scenarios",
+      "across {} scenarios"
+    ],
+    "e1_identity_auc": [
+      "| {} |"
+    ],
+    "e1_identity_gap": [
+      "| {} |"
+    ],
+    "e1_identity_cost": [
+      "| {} |"
+    ],
+    "e1_identity_regret": [
+      "| {} |"
+    ],
+    "e1_power_auc": [
+      "| {} |"
+    ],
+    "e1_power_gap": [
+      "| {} |"
+    ],
+    "e1_power_cost": [
+      "| {} |"
+    ],
+    "e1_power_regret": [
+      "| {} |"
+    ],
+    "e1_logit_shift_auc": [
+      "| {} |"
+    ],
+    "e1_logit_shift_gap": [
+      "| {} |"
+    ],
+    "e1_logit_shift_cost": [
+      "| {} |"
+    ],
+    "e1_logit_shift_regret": [
+      "| {} |"
+    ],
+    "e1_overconfident_auc": [
+      "| {} |"
+    ],
+    "e1_overconfident_gap": [
+      "| {} |"
+    ],
+    "e1_overconfident_cost": [
+      "| {} |"
+    ],
+    "e1_overconfident_regret": [
+      "| {} |"
+    ],
+    "e1_underconfident_auc": [
+      "| {} |"
+    ],
+    "e1_underconfident_gap": [
+      "| {} |"
+    ],
+    "e1_underconfident_cost": [
+      "| {} |"
+    ],
+    "e1_underconfident_regret": [
+      "| {} |"
+    ],
+    "e2_1_t": [
+      "| {} |"
+    ],
+    "e2_1_regret": [
+      "| {} |"
+    ],
+    "e2_1_share": [
+      "| {} |"
+    ],
+    "e2_2_t": [
+      "| {} |"
+    ],
+    "e2_2_regret": [
+      "| {} |"
+    ],
+    "e2_2_share": [
+      "| {} |"
+    ],
+    "e2_5_t": [
+      "| {} |"
+    ],
+    "e2_5_regret": [
+      "| {} |"
+    ],
+    "e2_5_share": [
+      "| {} |"
+    ],
+    "e2_10_t": [
+      "| {} |"
+    ],
+    "e2_10_regret": [
+      "| {} |"
+    ],
+    "e2_10_share": [
+      "| {} |"
+    ],
+    "e2_50_t": [
+      "| {} |"
+    ],
+    "e2_50_regret": [
+      "| {} |"
+    ],
+    "e2_50_share": [
+      "| {} |"
+    ],
+    "e2_200_t": [
+      "| {} |"
+    ],
+    "e2_200_regret": [
+      "| {} |"
+    ],
+    "e2_200_share": [
+      "| {} |"
+    ],
+    "e3_platt_2_after": [
+      "| {} |"
+    ],
+    "e3_platt_5_after": [
+      "| {} |"
+    ],
+    "e3_platt_10_after": [
+      "| {} |"
+    ],
+    "e3_platt_25_after": [
+      "| {} |"
+    ],
+    "e3_platt_50_after": [
+      "| {} |"
+    ],
+    "e3_isotonic_2_after": [
+      "| {} |"
+    ],
+    "e3_isotonic_5_after": [
+      "| {} |"
+    ],
+    "e3_isotonic_10_after": [
+      "| {} |"
+    ],
+    "e3_isotonic_25_after": [
+      "| {} |"
+    ],
+    "e3_isotonic_50_after": [
+      "| {} |"
+    ],
+    "e4_abs_gap_rho": [
+      "| {} |"
+    ],
+    "e4_ece_rho": [
+      "| {} |"
+    ],
+    "e4_brier_rho": [
+      "| {} |"
+    ],
+    "e4_auc_rho": [
+      "| {} |"
+    ]
+  },
+  "checked_documents": [
+    "README.md",
+    "docs/adr/ADR-005-what-this-cannot-measure.md"
+  ],
+  "note": "every value here is produced by running the suite and the four experiments"
+}
