@@ -1,0 +1,110 @@
+{
+  "experiment": "e3_repair",
+  "question": "What does repairing calibration recover, and what does it consume?",
+  "seeds": [
+    20260219,
+    11,
+    404,
+    2027
+  ],
+  "cells": [
+    {
+      "calibrator": "platt",
+      "calibration_frac": 0.02,
+      "rows_used": 1200,
+      "regret_before": 0.6319430272108844,
+      "regret_after": 0.002091836734693875,
+      "recovered": 0.6298511904761905,
+      "auc_change": 0.0
+    },
+    {
+      "calibrator": "platt",
+      "calibration_frac": 0.05,
+      "rows_used": 3000,
+      "regret_before": 0.6336359649122806,
+      "regret_after": 0.0019166666666666776,
+      "recovered": 0.6317192982456139,
+      "auc_change": 0.0
+    },
+    {
+      "calibrator": "platt",
+      "calibration_frac": 0.1,
+      "rows_used": 6000,
+      "regret_before": 0.632087962962963,
+      "regret_after": 0.0023194444444444573,
+      "recovered": 0.6297685185185186,
+      "auc_change": 0.0
+    },
+    {
+      "calibrator": "platt",
+      "calibration_frac": 0.25,
+      "rows_used": 15000,
+      "regret_before": 0.6332555555555556,
+      "regret_after": 0.002811111111111153,
+      "recovered": 0.6304444444444444,
+      "auc_change": 0.0
+    },
+    {
+      "calibrator": "platt",
+      "calibration_frac": 0.5,
+      "rows_used": 30000,
+      "regret_before": 0.6422,
+      "regret_after": 0.0025833333333333264,
+      "recovered": 0.6396166666666667,
+      "auc_change": 0.0
+    },
+    {
+      "calibrator": "isotonic",
+      "calibration_frac": 0.02,
+      "rows_used": 1200,
+      "regret_before": 0.6319430272108844,
+      "regret_after": 0.001203231292516982,
+      "recovered": 0.6307397959183674,
+      "auc_change": -0.0028315625908467146
+    },
+    {
+      "calibrator": "isotonic",
+      "calibration_frac": 0.05,
+      "rows_used": 3000,
+      "regret_before": 0.6336359649122806,
+      "regret_after": 0.0010482456140351037,
+      "recovered": 0.6325877192982454,
+      "auc_change": -0.0018231758251066599
+    },
+    {
+      "calibrator": "isotonic",
+      "calibration_frac": 0.1,
+      "rows_used": 6000,
+      "regret_before": 0.632087962962963,
+      "regret_after": 0.000814814814814796,
+      "recovered": 0.6312731481481482,
+      "auc_change": -0.0016099824883761271
+    },
+    {
+      "calibrator": "isotonic",
+      "calibration_frac": 0.25,
+      "rows_used": 15000,
+      "regret_before": 0.6332555555555556,
+      "regret_after": 0.0030833333333333546,
+      "recovered": 0.6301722222222222,
+      "auc_change": -0.0007663947473637578
+    },
+    {
+      "calibrator": "isotonic",
+      "calibration_frac": 0.5,
+      "rows_used": 30000,
+      "regret_before": 0.6422,
+      "regret_after": 0.0016916666666666191,
+      "recovered": 0.6405083333333333,
+      "auc_change": -0.0006226364554338115
+    }
+  ],
+  "smallest_frac": 0.02,
+  "smallest_rows": 1200,
+  "smallest_recovered": 0.6298511904761905,
+  "smallest_regret_after": 0.002091836734693875,
+  "best_calibrator": "isotonic",
+  "best_regret_after": 0.000814814814814796,
+  "platt_mean_auc_change": 0.0,
+  "isotonic_mean_auc_change": -0.001530750421425414
+}

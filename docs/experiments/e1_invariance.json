@@ -1,0 +1,78 @@
+{
+  "experiment": "e1_invariance",
+  "question": "Does a ranking metric see what a monotone distortion does to cost?",
+  "seeds": [
+    20260219,
+    11,
+    404,
+    2027,
+    90210,
+    13
+  ],
+  "strength": 2.0,
+  "cells": [
+    {
+      "distortion": "identity",
+      "auc": 0.7065917910694891,
+      "calibration_gap": -0.00030588613128258263,
+      "brier": 0.14595366980051458,
+      "textbook_cost": 0.732163888888889,
+      "trivial_cost": 0.7997388888888889,
+      "regret": 0.0015222222222222581,
+      "beats_trivial_seeds": 6,
+      "seeds": 6
+    },
+    {
+      "distortion": "power",
+      "auc": 0.7065917910694891,
+      "calibration_gap": -0.14579782931541266,
+      "brier": 0.1710998236819324,
+      "textbook_cost": 1.3664250000000002,
+      "trivial_cost": 0.7997388888888889,
+      "regret": 0.635225,
+      "beats_trivial_seeds": 0,
+      "seeds": 6
+    },
+    {
+      "distortion": "logit_shift",
+      "auc": 0.7065917910694891,
+      "calibration_gap": -0.16399498562892525,
+      "brier": 0.1811704827180777,
+      "textbook_cost": 1.7706722222222222,
+      "trivial_cost": 0.7997388888888889,
+      "regret": 1.0396666666666667,
+      "beats_trivial_seeds": 0,
+      "seeds": 6
+    },
+    {
+      "distortion": "overconfident",
+      "auc": 0.7065917910694891,
+      "calibration_gap": -0.10615475855471701,
+      "brier": 0.15918878598732122,
+      "textbook_cost": 1.1153833333333334,
+      "trivial_cost": 0.7997388888888889,
+      "regret": 0.38443611111111115,
+      "beats_trivial_seeds": 0,
+      "seeds": 6
+    },
+    {
+      "distortion": "underconfident",
+      "auc": 0.7065917910694891,
+      "calibration_gap": 0.11822263028296197,
+      "brier": 0.1613470858999584,
+      "textbook_cost": 0.7964888888888889,
+      "trivial_cost": 0.7997388888888889,
+      "regret": 0.06585277777777775,
+      "beats_trivial_seeds": 6,
+      "seeds": 6
+    }
+  ],
+  "auc_spread": 0.0,
+  "shared_auc": 0.7065917910694891,
+  "calibrated_regret": 0.0015222222222222581,
+  "worst_distortion": "logit_shift",
+  "worst_regret": 1.0396666666666667,
+  "regret_multiple": 682.992700729911,
+  "distortions_losing_to_nothing": 3,
+  "distortion_count": 5
+}

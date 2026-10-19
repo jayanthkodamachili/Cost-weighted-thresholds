@@ -1,0 +1,33 @@
+{
+  "experiment": "e4_cheap_screen",
+  "question": "Does a cheap calibration check predict an expensive decision cost?",
+  "trials": 300,
+  "gap_threshold": 0.02,
+  "bad_regret_share": 0.1,
+  "screens": [
+    {
+      "screen": "abs_gap",
+      "spearman_with_regret": 0.82361537350415
+    },
+    {
+      "screen": "ece",
+      "spearman_with_regret": 0.8147286080956455
+    },
+    {
+      "screen": "brier",
+      "spearman_with_regret": 0.18264380715341283
+    },
+    {
+      "screen": "auc",
+      "spearman_with_regret": 0.09543572706363404
+    }
+  ],
+  "bad_models": 155,
+  "passed_by_gap": 92,
+  "bad_models_missed": 1,
+  "miss_rate": 0.0064516129032258064,
+  "fine_models_flagged": 54,
+  "false_flag_rate": 0.3724137931034483,
+  "best_screen": "abs_gap",
+  "auc_spearman": 0.09543572706363404
+}
