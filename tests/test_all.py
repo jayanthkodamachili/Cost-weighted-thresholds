@@ -399,3 +399,47 @@ def test_a_calibrated_report_serialises_the_repair_as_well():
     assert "calibrated_reliability" in payload
     assert "auc_change" in payload and "regret_removed" in payload
     json.dumps(payload)
+
+
+class TestExitCodeGradesTheShippedArtifact:
+    """The exit code must describe the model that would actually be deployed.
+
+    These exist because the first version graded the raw decision even when a repair had
+    run, so a pipeline doing the right thing got told its model was worse than nothing.
+    """
+
+    def _report(self, **overrides):
+        from cost_thresholds.config import ScenarioConfig
+        from cost_thresholds.report import build_report
+
+        base = dict(
+            n_samples=20000, distortion="power", distortion_strength=2.0,
+            cost_false_negative=10.0, cost_false_positive=1.0, seed=20260219,
+        )
+        base.update(overrides)
+        return build_report(ScenarioConfig(**base))
+
+    def test_raw_scores_here_lose_to_having_no_model(self):
+        report = self._report()
+        assert not report.decision.beats_trivial
+        assert cli.exit_code_for(report, cli.REGRET_TOLERANCE) == cli.EXIT_WORSE_THAN_NOTHING
+
+    def test_the_same_scenario_repaired_is_not_graded_as_worse_than_nothing(self):
+        report = self._report(calibrator="isotonic", calibration_frac=0.05)
+        assert report.repaired
+        assert not report.decision.beats_trivial, "raw scores should still be the bad ones"
+        assert report.calibrated_decision.beats_trivial
+        assert cli.exit_code_for(report, cli.REGRET_TOLERANCE) != cli.EXIT_WORSE_THAN_NOTHING
+
+    def test_the_raw_reading_is_still_shown_after_a_repair(self):
+        """Grading the repair must not hide what was repaired."""
+        report = self._report(calibrator="isotonic", calibration_frac=0.05)
+        rendered = cli.render(report)
+        assert "costs more than not having it" in rendered
+        assert "after isotonic" in rendered
+
+    def test_a_repair_that_leaves_regret_still_exits_one(self):
+        report = self._report(distortion="logit_shift", distortion_strength=2.0,
+                              calibrator="platt", calibration_frac=0.02)
+        code = cli.exit_code_for(report, 0.0001)
+        assert code == cli.EXIT_REGRET

@@ -1,5 +1,9 @@
 """Command line entry point.
 
+When a calibrator is given, the exit code grades the repaired model, because that is the
+one that would be deployed; the raw reading stays in the output either way. ADR-003 has the
+reasoning and the bug that prompted it.
+
 Exit code 4 is the one worth having. A model can rank well, carry an unremarkable AUC, and
 still cost more to act on than ignoring it entirely, and no other code in this scheme says
 that. A pipeline that treats "the model works" as a boolean will never ask the question.
@@ -102,9 +106,21 @@ def render(report: Report) -> str:
 
 
 def exit_code_for(report: Report, tolerance: float) -> int:
-    if not report.decision.beats_trivial:
+    """Grade the artifact that would actually be shipped.
+
+    When a calibrator ran, that is the repaired model, not the raw one. An earlier version
+    graded report.decision unconditionally, which meant a pipeline that correctly repaired
+    a badly calibrated model was still told its model was worse than no model: the raw
+    scores lose to the trivial policy, the repaired scores carry regret of 0.0071, and the
+    exit code described the one nobody would deploy. A gate that punishes the fix is worse
+    than no gate, because the team that hits it learns to pass --regret-tolerance 1.
+
+    The raw decision is still printed, so the repair never hides what it repaired.
+    """
+    decision = report.calibrated_decision or report.decision
+    if not decision.beats_trivial:
         return EXIT_WORSE_THAN_NOTHING
-    if report.decision.regret_share > tolerance:
+    if decision.regret_share > tolerance:
         return EXIT_REGRET
     return EXIT_USABLE
 
