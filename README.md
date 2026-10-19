@@ -156,13 +156,6 @@ checker has been deliberately broken in both directions to confirm it fails when
 The suite is 71 tests at 100 percent line coverage. `make verify` runs offline from a clean
 clone and reproduces every experiment JSON byte for byte.
 
-## How this was built
-
-I built this with AI assistance (Claude), working through the design, the experiments and
-the writing in dialogue. The judgements about what to measure, which results were worth
-keeping, and which of my hypotheses the data refuted are recorded in `docs/adr/` as they
-happened, including the ones where I was wrong. I am stating this plainly because a
-repository that argues for honest measurement should not be coy about its own provenance.
 
 ## Layout
 
